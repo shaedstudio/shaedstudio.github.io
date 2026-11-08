@@ -24,7 +24,7 @@
   --yellow:#e9c64e; --green:#5cc68d; --red:#e7765b; --gold:#e7b43c; --shadow:0 2px 0 rgba(0,0,0,.3),0 12px 24px -12px rgba(0,0,0,.7); color-scheme:dark}}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;
+body{margin:0;overflow-x:hidden;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;
   background-image:repeating-linear-gradient(180deg,transparent 0 31px,var(--rule) 31px 33px);}
 a{color:inherit}
 .wrap{max-width:980px;margin:0 auto;padding-block:0 64px;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
@@ -32,7 +32,7 @@ a{color:inherit}
   clip-path:polygon(0 8%,3% 0,97% 4%,100% 0,99% 92%,96% 100%,4% 96%,0 100%)}
 .torn{background:var(--card);box-shadow:var(--shadow);
   clip-path:polygon(0 1%,6% 0,14% .8%,23% 0,35% .6%,48% 0,60% .9%,71% .1%,83% .7%,94% 0,100% 1%,99.4% 50%,100% 99%,90% 100%,77% 99.2%,62% 100%,49% 99.3%,34% 100%,21% 99.2%,9% 100%,0 99%,.6% 50%)}
-.beam{height:26px;background:var(--kraft);margin:0 -18px;box-shadow:var(--shadow);clip-path:polygon(0 10%,10% 0,30% 12%,52% 2%,75% 14%,92% 0,100% 10%,100% 88%,82% 100%,60% 86%,40% 100%,18% 88%,0 100%)}
+.beam{height:26px;background:var(--kraft);margin:0;box-shadow:var(--shadow);clip-path:polygon(0 10%,10% 0,30% 12%,52% 2%,75% 14%,92% 0,100% 10%,100% 88%,82% 100%,60% 86%,40% 100%,18% 88%,0 100%)}
 h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;text-wrap:balance}
 h1{font-weight:900;font-size:clamp(46px,10vw,96px);letter-spacing:-.02em}
 h2{font-weight:900;font-size:clamp(30px,5.5vw,46px);margin-bottom:18px}
@@ -50,7 +50,7 @@ header{padding-top:56px;display:grid;gap:18px}
 
 /* channels */
 .grid{display:grid;gap:22px;grid-template-columns:1fr}
-@media (min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+@media (min-width:760px){.grid{grid-template-columns:1fr 1fr}.ch.wide{grid-column:1/-1}}
 .ch{padding:22px 22px 24px;display:grid;gap:12px;align-content:start;position:relative}
 .ch:nth-child(odd){transform:rotate(-.4deg)}.ch:nth-child(even){transform:rotate(.35deg)}
 .head{display:flex;gap:14px;align-items:center}
@@ -139,7 +139,7 @@ footer{margin-top:80px;display:grid;gap:10px;color:var(--muted);font-size:15px}
       <span class="soon">opening soon, two episodes already drawn</span>
     </article>
 
-    <article class="ch torn" style="--c:var(--gold)">
+    <article class="ch torn wide" style="--c:var(--gold)">
       <div class="head"><img src="img/faeed.jpg" alt="FAEED orbit logo" width="64" height="64">
         <div><span class="label">Qur'an · surah explainers</span><h3>FAEED</h3></div></div>
       <p>The Qur'an, surah by surah, in English, Arabic and Urdu, with the sources on screen.</p>
@@ -159,7 +159,7 @@ footer{margin-top:80px;display:grid;gap:10px;color:var(--muted);font-size:15px}
   <ol class="steps">
     <li class="torn"><div><b>One notebook for everything.</b> Every channel has a page in our shared notebook with its rules, its next step and a dated log, so no idea gets lost and no rule gets forgotten.</div></li>
     <li class="torn"><div><b>Script from real sources.</b> Each video starts with a plain question someone actually types. Facts come from official pages (NCSC, GOV.UK, Report Fraud) or named scholarly works, and the date is written down.</div></li>
-    <li class="torn"><div><b>Draw it in code.</b> Pixel rooms, paper cut-outs and drawn explainers are built from code on this PC. No stock footage, no paid generators, and the same scene renders the same way every time.</div></li>
+    <li class="torn"><div><b>Draw it ourselves.</b> Pixel rooms and paper cut-outs are drawn in code on this PC, so the same scene renders the same way every time. No stock footage, and we say so when a tool helped make a picture.</div></li>
     <li class="torn"><div><b>AI helpers do the legwork.</b> A small team of AI assistants drafts, checks figures, renders and tidies. They never decide what's true, and they never post anything on their own.</div></li>
     <li class="torn"><div><b>A human checks it.</b> Every video gets a listen-through, a fact check, and for money or faith topics a proper review. If it doesn't pass, it doesn't post.</div></li>
     <li class="torn"><div><b>Upload by hand.</b> The last click is always a person's.</div></li>
