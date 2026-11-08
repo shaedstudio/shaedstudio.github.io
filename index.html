@@ -76,8 +76,9 @@ header{padding-top:56px;display:grid;gap:18px}
 /* roadmap */
 .road{position:relative;display:grid;gap:18px;padding-left:34px}
 .road::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:4px;background:repeating-linear-gradient(180deg,var(--kraft) 0 14px,transparent 14px 22px)}
-.stop{position:relative;padding:16px 18px;display:grid;gap:6px}
-.stop::before{content:"";position:absolute;left:-31px;top:20px;width:18px;height:18px;border-radius:50%;background:var(--c,var(--green));box-shadow:0 0 0 4px var(--paper)}
+.stopw{position:relative}
+.stopw::before{content:"";position:absolute;left:-31px;top:20px;width:18px;height:18px;border-radius:50%;background:var(--c,var(--green));box-shadow:0 0 0 4px var(--paper);z-index:1}
+.stop{padding:16px 18px;display:grid;gap:6px}
 .when{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
 .when span{font-family:var(--display);font-weight:900;font-size:20px}
 .stop ul{margin:0;padding-left:20px}
@@ -180,37 +181,37 @@ footer{margin-top:80px;display:grid;gap:10px;color:var(--muted);font-size:15px}
 <section id="roadmap" aria-labelledby="h-road">
   <h2 id="h-road">Where we're heading</h2>
   <div class="road">
-    <div class="stop torn" style="--c:var(--green)">
+    <div class="stopw" style="--c:var(--green)"><div class="stop torn">
       <div class="when"><span>Now</span><span class="est">November 2026</span></div>
       <ul>
         <li>Four channels live and posting</li>
         <li>New paper cut-out look rolling out, starting with Ledger Lines</li>
         <li>Christmas scam checks on The Digital S</li>
       </ul>
-    </div>
-    <div class="stop torn" style="--c:var(--amber)">
+    </div></div>
+    <div class="stopw" style="--c:var(--amber)"><div class="stop torn">
       <div class="when"><span>This winter</span><span class="est">roughly Dec 2026 to Feb 2027</span></div>
       <ul>
         <li>Shaed History opens its doors with Rome and the British Empire</li>
         <li>A retirement strand on Ledger Lines: State Pension and workplace pensions, step by step</li>
         <li>Longer, snowier rooms on Shaed Ambience</li>
       </ul>
-    </div>
-    <div class="stop torn" style="--c:var(--teal)">
+    </div></div>
+    <div class="stopw" style="--c:var(--teal)"><div class="stop torn">
       <div class="when"><span>Spring</span><span class="est">around March to May 2027</span></div>
       <ul>
         <li>Spot the Scam, a small game for families, from The Digital S</li>
         <li>A paper series on Shaed Ambience next to the pixel worlds</li>
         <li>FAEED keeps going, surah by surah</li>
       </ul>
-    </div>
-    <div class="stop torn" style="--c:var(--brick)">
+    </div></div>
+    <div class="stopw" style="--c:var(--brick)"><div class="stop torn">
       <div class="when"><span>Later in 2027</span><span class="est">a happy guess, not a promise</span></div>
       <ul>
         <li>Each channel big enough to pay its own way</li>
         <li>More rooms, more rules, more episodes, and the same careful checks</li>
       </ul>
-    </div>
+    </div></div>
   </div>
   <p class="note">Dates are rough. We'd rather be late and right than early and wrong.</p>
 </section>
