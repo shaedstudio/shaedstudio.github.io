@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shaed Studio</title>
+<meta name="description" content="A small UK studio making careful channels: Qur'an explainers, scam checks, cosy ambience, plain-English money rules and drawn history.">
+<meta property="og:title" content="Shaed Studio">
+<meta property="og:description" content="Small, careful channels made at one desk in the UK. All our links in one place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Caveat:wght@600&display=swap">
+<style>
+/* Layout: a desk covered in paper. Ruled cream sheet, torn cut-out cards, a kraft beam, one column that widens to two. */
+:root{
+  --paper:#f7f3ea; --rule:rgba(31,154,92,.10); --ink:#1f1d1a; --muted:#5c574d; --card:#fffdf8; --kraft:#c9955a;
+  --yellow:#f6d35b; --green:#1f9a5c; --red:#d9583b; --gold:#e7b43c; --teal:#2ec4b6; --amber:#e8913f; --brick:#c4553e;
+  --shadow:0 2px 0 rgba(60,40,10,.08),0 10px 22px -12px rgba(60,40,10,.35);
+  --display:"Montserrat",system-ui,sans-serif; --body:"Atkinson Hyperlegible",system-ui,sans-serif; --hand:"Caveat","Comic Sans MS",cursive;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#1d1b17; --rule:rgba(124,199,150,.09); --ink:#f3ede1; --muted:#b9b09f; --card:#2a2721; --kraft:#a5784a;
+  --yellow:#e9c64e; --green:#5cc68d; --red:#e7765b; --gold:#e7b43c; --shadow:0 2px 0 rgba(0,0,0,.3),0 12px 24px -12px rgba(0,0,0,.7); color-scheme:dark}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;
+  background-image:repeating-linear-gradient(180deg,transparent 0 31px,var(--rule) 31px 33px);}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding-block:0 64px;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.tape{display:inline-block;background:var(--yellow);color:#1f1d1a;font-family:var(--display);font-weight:800;padding:6px 14px;transform:rotate(-1.2deg);box-shadow:var(--shadow);
+  clip-path:polygon(0 8%,3% 0,97% 4%,100% 0,99% 92%,96% 100%,4% 96%,0 100%)}
+.torn{background:var(--card);box-shadow:var(--shadow);
+  clip-path:polygon(0 1%,6% 0,14% .8%,23% 0,35% .6%,48% 0,60% .9%,71% .1%,83% .7%,94% 0,100% 1%,99.4% 50%,100% 99%,90% 100%,77% 99.2%,62% 100%,49% 99.3%,34% 100%,21% 99.2%,9% 100%,0 99%,.6% 50%)}
+.beam{height:26px;background:var(--kraft);margin:0 -18px;box-shadow:var(--shadow);clip-path:polygon(0 10%,10% 0,30% 12%,52% 2%,75% 14%,92% 0,100% 10%,100% 88%,82% 100%,60% 86%,40% 100%,18% 88%,0 100%)}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;text-wrap:balance}
+h1{font-weight:900;font-size:clamp(46px,10vw,96px);letter-spacing:-.02em}
+h2{font-weight:900;font-size:clamp(30px,5.5vw,46px);margin-bottom:18px}
+h3{font-weight:800;font-size:22px}
+.hand{font-family:var(--hand);font-size:24px;color:var(--green);line-height:1.1}
+p{margin:0}
+section{margin-top:72px}
+
+/* hero */
+header{padding-top:56px;display:grid;gap:18px}
+.lede{font-size:clamp(18px,2.4vw,21px);max-width:38ch;color:var(--muted)}
+.coins{display:flex;gap:6px;margin-top:6px}
+.coin{width:34px;height:34px;border-radius:50%;background:var(--gold);color:#a87a12;display:grid;place-items:center;font-family:var(--display);font-weight:900;box-shadow:var(--shadow)}
+.coin:nth-child(2){transform:translateY(8px)}.coin:nth-child(3){transform:translateY(16px)}
+
+/* channels */
+.grid{display:grid;gap:22px;grid-template-columns:1fr}
+@media (min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+.ch{padding:22px 22px 24px;display:grid;gap:12px;align-content:start;position:relative}
+.ch:nth-child(odd){transform:rotate(-.4deg)}.ch:nth-child(even){transform:rotate(.35deg)}
+.head{display:flex;gap:14px;align-items:center}
+.head img{width:64px;height:64px;border-radius:50%;flex:none;box-shadow:0 0 0 3px var(--card),0 0 0 5px var(--c)}
+.label{font-family:var(--display);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.links a{font-family:var(--display);font-weight:800;font-size:14px;text-decoration:none;padding:8px 14px;border:2px solid var(--c);border-radius:999px;transition:background .15s,color .15s}
+.links a:hover,.links a:focus-visible{background:var(--c);color:var(--card);outline:none}
+.soon{font-family:var(--hand);font-size:22px;color:var(--c)}
+.own{font-size:14px;color:var(--muted);font-style:italic}
+
+/* how we make it */
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:14px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start;padding:16px 18px;counter-increment:s}
+.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:20px}
+.steps b{font-family:var(--display);font-weight:800}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.tool{background:var(--card);box-shadow:var(--shadow);padding:8px 14px;font-weight:700;font-size:15px;clip-path:polygon(0 6%,5% 0,95% 5%,100% 0,98% 95%,93% 100%,6% 94%,0 100%)}
+.tool small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.rules{margin-top:22px;padding:18px 20px;display:grid;gap:6px}
+.rules strong{font-family:var(--display)}
+
+/* roadmap */
+.road{position:relative;display:grid;gap:18px;padding-left:34px}
+.road::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:4px;background:repeating-linear-gradient(180deg,var(--kraft) 0 14px,transparent 14px 22px)}
+.stop{position:relative;padding:16px 18px;display:grid;gap:6px}
+.stop::before{content:"";position:absolute;left:-31px;top:20px;width:18px;height:18px;border-radius:50%;background:var(--c,var(--green));box-shadow:0 0 0 4px var(--paper)}
+.when{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.when span{font-family:var(--display);font-weight:900;font-size:20px}
+.stop ul{margin:0;padding-left:20px}
+.stop li{margin:2px 0}
+.est{font-family:var(--hand);font-size:20px;color:var(--muted)}
+.note{margin-top:18px;max-width:60ch;color:var(--muted);font-size:15px}
+
+footer{margin-top:80px;display:grid;gap:10px;color:var(--muted);font-size:15px}
+@media (prefers-reduced-motion:no-preference){.links a,.ch{transition:transform .2s}.ch:hover{transform:rotate(0) translateY(-2px)}}
+</style>
+</head>
+<body>
+<div class="beam" aria-hidden="true"></div>
+<div class="wrap">
+
+<header>
+  <span class="hand">hello from one small desk in the UK</span>
+  <h1>Shaed Studio</h1>
+  <p class="lede">We make small, careful channels. One person, a stack of home-made tools, and a rule that nothing goes out until a human has checked it.</p>
+  <div><span class="tape">All our channels, in one place ↓</span></div>
+</header>
+
+<section id="channels" aria-labelledby="h-ch">
+  <h2 id="h-ch">The channels</h2>
+  <div class="grid">
+
+    <article class="ch torn" style="--c:var(--teal)">
+      <div class="head"><img src="img/digital-s.jpg" alt="Scout, the Digital S robot" width="64" height="64">
+        <div><span class="label">UK online safety</span><h3>The Digital S</h3></div></div>
+      <p>Scams change every week. Scout shows you the trap, then the one check that spots it. Pause. Check. Then click.</p>
+      <div class="links">
+        <a href="https://www.youtube.com/@TheDigitalSHQ">YouTube</a>
+        <a href="https://www.instagram.com/thedigitalshq/">Instagram</a>
+        <a href="https://www.facebook.com/thedigitalsuk">Facebook</a>
+      </div>
+    </article>
+
+    <article class="ch torn" style="--c:var(--amber)">
+      <div class="head"><img src="img/ambience.jpg" alt="A lit pixel cabin in the snow" width="64" height="64">
+        <div><span class="label">Cosy pixel worlds</span><h3>Shaed Ambience</h3></div></div>
+      <p>One-hour rooms of rain, snow and night sounds for study, sleep and calm. Every scene is drawn in code, and every sound is made here.</p>
+      <div class="links"><a href="https://www.youtube.com/@ShaedAmbience">YouTube</a></div>
+    </article>
+
+    <article class="ch torn" style="--c:var(--green)">
+      <div class="head"><img src="img/ledger.jpg" alt="Ledger Lines LL logo" width="64" height="64">
+        <div><span class="label">UK money, explained</span><h3>Ledger Lines</h3></div></div>
+      <p>One UK money rule, explained plainly, every week. ISAs, pensions, tax codes. General education only, never advice.</p>
+      <div class="links">
+        <a href="https://www.youtube.com/@LedgerLines-s2c">YouTube</a>
+        <a href="https://www.instagram.com/ledgerlinesukk/">Instagram</a>
+      </div>
+    </article>
+
+    <article class="ch torn" style="--c:var(--brick)">
+      <div class="head"><img src="img/history.jpg" alt="Shaed History S mark" width="64" height="64">
+        <div><span class="label">History, drawn</span><h3>Shaed History</h3></div></div>
+      <p>History, drawn and explained, with the sources named and the "why" behind what happened.</p>
+      <span class="soon">opening soon, two episodes already drawn</span>
+    </article>
+
+    <article class="ch torn" style="--c:var(--gold)">
+      <div class="head"><img src="img/faeed.jpg" alt="FAEED orbit logo" width="64" height="64">
+        <div><span class="label">Qur'an · surah explainers</span><h3>FAEED</h3></div></div>
+      <p>The Qur'an, surah by surah, in English, Arabic and Urdu, with the sources on screen.</p>
+      <div class="links">
+        <a href="https://www.youtube.com/@FAEED123">YouTube</a>
+        <a href="https://www.tiktok.com/@faeed877">TikTok</a>
+        <a href="https://www.instagram.com/faeed.123/">Instagram</a>
+      </div>
+      <p class="own">FAEED is its own brand with its own rules: no faces, no music, and every point traced to a source.</p>
+    </article>
+
+  </div>
+</section>
+
+<section id="how" aria-labelledby="h-how">
+  <h2 id="h-how">How we make it</h2>
+  <ol class="steps">
+    <li class="torn"><div><b>One notebook for everything.</b> Every channel has a page in our shared notebook with its rules, its next step and a dated log, so no idea gets lost and no rule gets forgotten.</div></li>
+    <li class="torn"><div><b>Script from real sources.</b> Each video starts with a plain question someone actually types. Facts come from official pages (NCSC, GOV.UK, Report Fraud) or named scholarly works, and the date is written down.</div></li>
+    <li class="torn"><div><b>Draw it in code.</b> Pixel rooms, paper cut-outs and drawn explainers are built from code on this PC. No stock footage, no paid generators, and the same scene renders the same way every time.</div></li>
+    <li class="torn"><div><b>AI helpers do the legwork.</b> A small team of AI assistants drafts, checks figures, renders and tidies. They never decide what's true, and they never post anything on their own.</div></li>
+    <li class="torn"><div><b>A human checks it.</b> Every video gets a listen-through, a fact check, and for money or faith topics a proper review. If it doesn't pass, it doesn't post.</div></li>
+    <li class="torn"><div><b>Upload by hand.</b> The last click is always a person's.</div></li>
+  </ol>
+  <div class="tools" aria-label="Tools we built">
+    <span class="tool">Paper Studio<small>code-drawn paper cut-out animation</small></span>
+    <span class="tool">Clockkeeper<small>pixel worlds and home-made sound</small></span>
+    <span class="tool">The Brain<small>one notebook that runs every channel</small></span>
+    <span class="tool">The Orchestrator<small>sends each job to the right helper</small></span>
+    <span class="tool">Spot the Scam<small>a small game for families, in the works</small></span>
+  </div>
+  <div class="rules torn">
+    <strong>House rules</strong>
+    <span>No tips, picks or predictions on money. No faces, prophets or angels shown on faith content. No fake urgency. Sources named. Mistakes fixed in public.</span>
+  </div>
+</section>
+
+<section id="roadmap" aria-labelledby="h-road">
+  <h2 id="h-road">Where we're heading</h2>
+  <div class="road">
+    <div class="stop torn" style="--c:var(--green)">
+      <div class="when"><span>Now</span><span class="est">November 2026</span></div>
+      <ul>
+        <li>Four channels live and posting</li>
+        <li>New paper cut-out look rolling out, starting with Ledger Lines</li>
+        <li>Christmas scam checks on The Digital S</li>
+      </ul>
+    </div>
+    <div class="stop torn" style="--c:var(--amber)">
+      <div class="when"><span>This winter</span><span class="est">roughly Dec 2026 to Feb 2027</span></div>
+      <ul>
+        <li>Shaed History opens its doors with Rome and the British Empire</li>
+        <li>A retirement strand on Ledger Lines: State Pension and workplace pensions, step by step</li>
+        <li>Longer, snowier rooms on Shaed Ambience</li>
+      </ul>
+    </div>
+    <div class="stop torn" style="--c:var(--teal)">
+      <div class="when"><span>Spring</span><span class="est">around March to May 2027</span></div>
+      <ul>
+        <li>Spot the Scam, a small game for families, from The Digital S</li>
+        <li>A paper series on Shaed Ambience next to the pixel worlds</li>
+        <li>FAEED keeps going, surah by surah</li>
+      </ul>
+    </div>
+    <div class="stop torn" style="--c:var(--brick)">
+      <div class="when"><span>Later in 2027</span><span class="est">a happy guess, not a promise</span></div>
+      <ul>
+        <li>Each channel big enough to pay its own way</li>
+        <li>More rooms, more rules, more episodes, and the same careful checks</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">Dates are rough. We'd rather be late and right than early and wrong.</p>
+</section>
+
+<footer>
+  <span class="hand">thanks for stopping by</span>
+  <span>Shaed Studio · made in the UK · updated 8 November 2026</span>
+</footer>
+</div>
+</body>
+</html>
