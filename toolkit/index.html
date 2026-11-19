@@ -1,0 +1,233 @@
+<!doctype html>
+<!--
+  Scout's Toolkit. Static page: no JavaScript, cookies, trackers or outside requests.
+  Adding an affiliate link (see TOOLKIT-BEFORE-LIVE.md, kept outside this folder):
+    1. Replace the href with the approved link.
+    2. Add rel="sponsored nofollow noopener" to it.
+    3. Put <span class="ad">Ad</span> straight before the link.
+    4. Swap the two disclosure sentences as marked below.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scout's Toolkit | The Digital S</title>
+<meta name="description" content="Free first steps for stronger passwords, email security, backups and device updates, plus who to contact in the UK after a scam.">
+<link rel="icon" href="assets/icon-180.png">
+<style>
+@font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Silkscreen"; src: url("assets/fonts/Silkscreen-Bold.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Atkinson"; font-weight: 400; src: url("assets/fonts/atkinson-400.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Atkinson"; font-weight: 700; src: url("assets/fonts/atkinson-700.woff2") format("woff2"); font-display: swap; }
+
+:root {
+  --ink: #0B1226; --navy: #16213F; --mint: #5EF2C6;
+  --amber: #FFB547; --coral: #FF6B57; --paper: #F6F1E4;
+  --gutter: clamp(16px, 4vw, 48px);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 400 1.125rem/1.55 "Atkinson", Verdana, sans-serif;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+a:hover { text-decoration-thickness: 4px; }
+a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; background: var(--amber); color: var(--ink); }
+.wrap { max-width: 1160px; margin: 0 auto; padding-inline: var(--gutter); }
+h1, h2, h3 { font-family: "Anton", Impact, sans-serif; font-weight: 400; text-transform: uppercase; margin: 0; }
+p { margin: 0; }
+p + p { margin-top: .6em; }
+
+/* Hero */
+.hero { background: var(--navy); color: var(--paper); overflow: hidden; }
+.hero .wrap {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end;
+  gap: clamp(16px, 4vw, 56px); padding-top: clamp(24px, 4vw, 40px);
+}
+.brand { font-family: "Silkscreen", monospace; font-size: 1rem; color: var(--mint); margin-bottom: clamp(20px, 4vw, 40px); }
+h1 {
+  font-size: clamp(3rem, 8.6vw, 6.75rem); line-height: 1.04; letter-spacing: .005em;
+  color: var(--amber); text-shadow: 0 .06em 0 var(--ink); max-width: 11.5em;
+}
+.lede { font-size: clamp(1.125rem, 2vw, 1.375rem); max-width: 36em; margin: clamp(18px, 3vw, 28px) 0 clamp(24px, 4vw, 44px); }
+.scout { width: clamp(180px, 25vw, 320px); margin-bottom: -6px; }
+.steps { display: block; width: 100%; height: 16px; background: var(--ink); }
+
+/* Disclosure */
+.disclosure { background: var(--ink); color: var(--paper); padding-block: 14px; font-size: 1rem; }
+.disclosure .wrap { max-width: 1160px; }
+
+/* Urgent help */
+.help { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+.help-now { background: var(--coral); color: var(--ink); padding: clamp(28px, 5vw, 52px) var(--gutter); }
+.help-later { background: var(--ink); color: var(--paper); padding: clamp(28px, 5vw, 52px) var(--gutter); }
+.help h2 { font-size: clamp(2rem, 4.4vw, 3.25rem); line-height: 1.1; margin-bottom: 18px; max-width: 14em; }
+.help-later h2 { color: var(--mint); font-size: clamp(1.625rem, 3vw, 2.25rem); }
+.help ol { margin: 0; padding-left: 1.3em; max-width: 36em; }
+.help li + li { margin-top: .8em; }
+.help li::marker { font-family: "Anton", Impact, sans-serif; }
+.help dl { margin: 0; }
+.help dt { font-weight: 700; }
+.help dd { margin: 0 0 .8em; }
+.note { margin-top: 1em; max-width: 36em; }
+
+/* Questions */
+.questions { padding-block: clamp(36px, 6vw, 72px); }
+.questions > .wrap > h2 { font-size: clamp(2.25rem, 5.4vw, 3.75rem); line-height: 1.08; max-width: 16em; }
+.intro { margin: 14px 0 clamp(24px, 4vw, 40px); max-width: 38em; }
+.row {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr) minmax(0, 1fr);
+  border: 3px solid var(--ink); background: #fff; box-shadow: 8px 8px 0 var(--ink);
+}
+.row + .row { margin-top: 32px; }
+.row h3 { font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.12; padding: 22px; background: var(--navy); color: var(--paper); }
+.free { padding: 22px; border-left: 3px solid var(--ink); }
+.paid { padding: 22px; border-left: 3px solid var(--ink); background: var(--paper); font-size: 1rem; }
+.tag {
+  display: inline-block; font-family: "Silkscreen", monospace; font-size: .875rem; line-height: 1;
+  padding: 6px 8px; margin-bottom: 12px; background: var(--mint); color: var(--ink);
+}
+.paid .tag { background: var(--ink); color: var(--paper); }
+.ad {
+  display: inline-block; font-family: "Silkscreen", monospace; font-size: .75rem; line-height: 1;
+  padding: 3px 5px; margin-right: 4px; background: var(--amber); color: var(--ink); vertical-align: 2px;
+}
+.free ul { margin: .6em 0 0; padding-left: 1.2em; }
+.free li + li { margin-top: .4em; }
+
+/* Footer */
+footer { background: var(--navy); color: var(--paper); padding-block: 32px; font-size: 1rem; }
+footer p { max-width: 44em; }
+
+@media (max-width: 860px) {
+  .help { grid-template-columns: minmax(0, 1fr); }
+  .row { grid-template-columns: minmax(0, 1fr); box-shadow: 5px 5px 0 var(--ink); }
+  .free, .paid { border-left: 0; border-top: 3px solid var(--ink); }
+}
+@media (max-width: 560px) {
+  .hero .wrap { grid-template-columns: minmax(0, 1fr); }
+  .scout { width: 96px; justify-self: end; margin-top: -24px; }
+  .lede { margin-bottom: 0; }
+  h1 { max-width: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="brand">The Digital S</p>
+      <h1>You don't need to buy anything to stay safe</h1>
+      <p class="lede">Start with the free step under each question. The paid tools are optional, for people who want more.</p>
+    </div>
+    <img class="scout" src="assets/scout-shield.png" width="516" height="622" alt="Scout, The Digital S mascot, holding a shield">
+  </div>
+  <svg class="steps" viewBox="0 0 64 4" preserveAspectRatio="none" shape-rendering="crispEdges" aria-hidden="true">
+    <path fill="#16213F" d="M0 0h64v1h-4v1h-4v1h-4v1H12V3H8V2H4V1H0z"/>
+  </svg>
+</header>
+
+<div class="disclosure">
+  <div class="wrap">
+    <!-- BEFORE ANY AFFILIATE LINK GOES IN, replace the next sentence with:
+         Links marked Ad earn The Digital S a commission if you buy through them. Free steps come first either way. -->
+    <p>No link on this page earns The Digital S any money right now. If that changes, those links will be marked Ad.</p>
+  </div>
+</div>
+
+<main>
+  <section class="help" aria-label="Help after a scam">
+    <div class="help-now">
+      <h2>Sent money or shared bank details?</h2>
+      <ol>
+        <li><strong>Call your bank now.</strong> Dial <a href="tel:159">159</a> to reach your bank's fraud team. If your bank isn't covered, use the number on the back of your card.</li>
+        <li><strong>Report it.</strong> Use <a href="https://www.reportfraud.police.uk">Report Fraud</a> or call <a href="tel:03001232040">0300 123 2040</a>. In Scotland, call Police Scotland on <a href="tel:101">101</a>.</li>
+      </ol>
+    </div>
+    <div class="help-later">
+      <h2>Lost nothing, but something looks off?</h2>
+      <dl>
+        <dt>Text message</dt>
+        <dd>Forward it to 7726. It's free.</dd>
+        <dt>Email</dt>
+        <dd>Forward it to <a href="mailto:report@phishing.gov.uk">report@phishing.gov.uk</a>.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="questions">
+    <div class="wrap">
+      <h2>Four questions to check today</h2>
+      <p class="intro">The safety steps follow advice from the UK's <a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online">National Cyber Security Centre</a>, which doesn't endorse the products named here. No tool can stop every scam, so if a message rushes you, stop and check first.</p>
+
+      <article class="row">
+        <h3>Could someone get into your email with just a password?</h3>
+        <div class="free">
+          <span class="tag">Free</span>
+          <p>Turn on two-step verification for your email first, because it can be used to reset your other accounts. An authenticator app or passkey is stronger than a text code, but a text code is much better than nothing.</p>
+        </div>
+        <div class="paid">
+          <span class="tag">Optional</span>
+          <p>A <a href="https://www.yubico.com/products/">YubiKey</a> is a small hardware key you plug in or tap to sign in. If you buy one, get a spare so a lost key doesn't lock you out.</p>
+        </div>
+      </article>
+
+      <article class="row">
+        <h3>Do you use the same password in more than one place?</h3>
+        <div class="free">
+          <span class="tag">Free</span>
+          <p>A password manager can create and remember a different password for every account. These free plans include unlimited logins and passkey support:</p>
+          <ul>
+            <li><a href="https://proton.me/pass">Proton Pass</a></li>
+            <li><a href="https://bitwarden.com/products/personal/">Bitwarden</a></li>
+          </ul>
+        </div>
+        <div class="paid">
+          <span class="tag">Optional</span>
+          <p><a href="https://proton.me/pass/pricing">Proton Pass paid plans</a> lift the free plan's limits on built-in sign-in codes and hide-my-email aliases.</p>
+        </div>
+      </article>
+
+      <article class="row">
+        <h3>Would you lose your photos if your computer died today?</h3>
+        <div class="free">
+          <span class="tag">Free</span>
+          <p>Keep a copy of what matters somewhere else. If you use an external drive, unplug it when the backup finishes so malware can't reach it as easily.</p>
+          <p>Prefer the cloud? <a href="https://www.idrive.com/pricing">IDrive Basic</a> gives you 10 GB free, with no card needed.</p>
+        </div>
+        <div class="paid">
+          <span class="tag">Optional</span>
+          <p><a href="https://www.idrive.com/pricing">IDrive's paid plans</a> are for when 10 GB isn't enough.</p>
+        </div>
+      </article>
+
+      <article class="row">
+        <h3>Is your phone or computer still getting security updates?</h3>
+        <div class="free">
+          <span class="tag">Free</span>
+          <p>Turn on automatic updates. If your device no longer gets them, plan to replace it.</p>
+          <p>Windows comes with Windows Security built in. <a href="https://www.bitdefender.com/en-us/consumer/free-antivirus">Bitdefender Antivirus Free</a> is another no-cost option for Windows.</p>
+        </div>
+        <div class="paid">
+          <span class="tag">Optional</span>
+          <p><a href="https://www.bitdefender.com/en-us/consumer/antivirus">Bitdefender's paid versions</a> add features the free one leaves out. Check you need them before paying.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Checked on 5 November 2026. Plans and prices change, so check the provider's site before you sign up or buy. This is general safety information, not professional advice.</p>
+    <p>This page uses no cookies or trackers. Other sites you visit from here have their own policies.</p>
+    <p>Spotted a mistake or have a question? Leave a comment on any video on <a href="https://www.youtube.com/@TheDigitalSHQ">The Digital S YouTube channel</a>. Don't share personal details or anything about your accounts in a comment. If you've lost money, use the help at the top of this page.</p>
+    <p>Follow Scout on <a href="https://www.youtube.com/@TheDigitalSHQ">YouTube</a> and <a href="https://www.instagram.com/thedigitalshq/">Instagram</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
